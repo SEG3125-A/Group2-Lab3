@@ -1,0 +1,111 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #2f3e46; /* Petrol blue background */
+  color: #d4af37; /* Gold colored text */
+}
+.tab {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #334e58; /* A shade of petrol blue for tabs */
+}
+.tablinks {
+  cursor: pointer;
+  flex: 1;
+  display: inline-flex; /* Changed to inline-flex for button-like appearance */
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 5px; /* Added space between buttons */
+  border-radius: 5px; /* Rounded corners for button look */
+  border: 2px solid #e6b800; /* Thicker gold border for the tabs */
+  background-color: #334e58; /* A shade of petrol blue for the tab buttons */
+  color: #d4af37; /* Gold text for the tab buttons */
+  font-weight: bold; /* Makes the text bold */
+  text-shadow: 1px 1px 2px #000000; /* Subtle text shadow for depth */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  padding: 10px 20px; /* Padding for a larger click area */
+  text-decoration: none; /* Removes underline from links if any */
+}
+
+.tablinks:hover {
+  background-color: #d4af37; /* Gold background on hover */
+  color: #2f3e46; /* Petrol blue text on hover */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate a clickable item */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Adds shadow for depth on hover */
+}
+.breadcrumb {
+  display: inline-block; /* Make the breadcrumb behave like an inline block element */
+  background-color: #334e58; /* Background color for the breadcrumb */
+  padding: 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners for the breadcrumb */
+  margin-right: 10px; /* Space between breadcrumbs */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.breadcrumb:hover {
+  background-color: #d4af37; /* Change background color on hover */
+  transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
+
+.tablinks img {
+  margin-right: 8px;
+}
+.tabcontent {
+  display: none;
+  padding: 60px 20px;
+  height: calc(100% - 50px);
+  width: 100%;
+  box-sizing: border-box;
+}
+.tabcontent.active {
+  display: block;
+}
+#Products {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: stretch;
+}
+.product {
+ flex: 0 1 30%;
+ box-sizing: border-box;
+ margin: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.productImage {
+  max-width: 100px; /* Ajustez cette valeur selon vos besoins */
+  height: auto; /* Pour maintenir le ratio d'aspect de l'image */
+  display: block; /* Pour que l'image ne prenne pas plus de place que nécessaire */
+  /*margin: 0 auto;  Centre l'image horizontalement dans son conteneur */
+}
+
+#signature {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#Products .footer {
+  display: none;
+}
+
+

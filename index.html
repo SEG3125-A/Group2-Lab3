@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- use of external CSS -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>NON Company</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <h1>NON Company</h1>
+    </div>
+
+    <div class="container">
+        <div class="tab">
+            <div class="breadcrumb tablinks" onclick="openTab(event, 'customer')">
+                <h2 class="link" id="defaultOpen">1 - Personal Information</h2>
+            </div>
+            <div class="tab-separator">
+                <h2>&nbsp;>&nbsp;</h2>
+            </div>
+            <div class="breadcrumb tablinks" onclick="openTab(event, 'products')">
+                <h2 class="link">2 - Pick your Products</h2>
+            </div>
+            <div class="tab-separator">
+                <h2>&nbsp;>&nbsp;</h2>
+            </div>
+            <div class="breadcrumb tablinks" onclick="openTab(event, 'cart')">
+                <h2 class="link">3 - View your Shopping Cart</h2>
+            </div>
+        </div>
+    </div>
+
+        <!-- A personal data entry area -->
+        <div id="customer" class="tabcontent">
+            <h3>Step 1- Personal Information</h3>
+            <p>To help us better satisfy your needs, we would like to know your dietary preferences.</p>
+
+            <p>Do you have any of the following dietary restrictions or preferences?</p>
+            <div class="restrictionsCheckboxes" id="restrictionsCheckboxes" name="restrictionsCheckboxes"
+                onchange="restrictProductChoices()">
+                <div class="choiceBox">
+                    <input type="checkbox" id="vegetarian" name="restriction">
+                    <label for="vegetarian">I am <span class="customerID">vegetarian</span></label>
+                </div>
+
+                <div class="choiceBox">
+                    <input type="checkbox" id="glutenIntolerant" name="restriction">
+                    <label for="glutenIntolerant">I am <span class="customerID">allergic to gluten</span></label>
+                </div>
+
+                <div class="choiceBox">
+                    <input type="checkbox" id="organic" name="restriction">
+                    <label for="organic">I prefer <span class="customerID">organic foods</span></label>
+                </div>
+
+                <div class="choiceBox">
+                    <input type="checkbox" id="nopreference" name="restriction">
+                    <label for="none">I do not have any preferences</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- An area for choosing items -->
+        <div id="products" class="tabcontent">
+            <h3>Step 2 - Pick your Products</h3>
+            <p>Based on your previous choices, we preselected products which better suit you.</p>
+            <p>Please select one or more items below. Press <span class="plus">+</span> to increase the number of a
+                selected item in your shopping cart,
+                and <span class="minus">-</span> to decrease it.</p>
+            <p class = "selectedItemsPar">Selected items will be directly added to your shopping cart.</p>
+
+            <!-- display products here -->
+            <div class="displayProductWrapper">
+                <div class="displayProduct" id="displayProduct">
+                </div>
+            </div>
+
+            <p>Click the button below to add the selected items to your cart:</p>
+            <div>
+                <div class="addToCart">
+                    <button class="addToCartBtn" id="addCart" type="button" class="block" onclick="selectedItems()">Add
+                        Selected Items to your Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- An area giving the basket view -->
+        <div id="cart" class="tabcontent">
+            <h3>Step 3 - View your Shopping Cart</h3>
+            <!-- display cart here -->
+            <div id="displayCart"></div>
+
+            <div id="totalAmount"></div>
+
+            <p></p>
+
+        </div>
+
+
+
+    <!-- use of JavaScript (separate files) to contain the script associated with the site -->
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+    
+</body>
+
+        <p id="signature">Website designed by Malick Ndoye, Farid Ouedraogo & Elie N. Ndoumaï - 2023</p>
+
+</html>
+
+<!-- MB ! -->
